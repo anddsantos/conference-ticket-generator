@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 1, 86);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    font-family: 'Inconsolata';
+}
+
+main {
+    padding: 25px;
+}
+
+.project-logo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    margin: auto;
+    max-width: 700px;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.project-desc {
+    color: hsl(252, 6%, 83%);
+}
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form input:not(input[type="file"]) {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid hsl(0, 0%, 100%);
+    outline: none;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.upFile-div {
+    cursor: pointer;
+    background:
+        repeating-linear-gradient(to right, hsl(0, 0%, 100%) 0 5px, transparent 5px 12px) top,
+        repeating-linear-gradient(to right, hsl(0, 0%, 100%) 0 5px, transparent 5px 12px) bottom,
+        repeating-linear-gradient(to bottom, hsl(0, 0%, 100%) 0 5px, transparent 5px 12px) left,
+        repeating-linear-gradient(to bottom, hsl(0, 0%, 100%) 0 5px, transparent 5px 12px) right,
+        rgba(255, 255, 255, 0.06);
+    background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+form input[type="file"] {
+    opacity: 0;
+    display: none;
+}
+
+.upFIle-desc {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    color: hsl(252, 6%, 83%);
+}
+
+.generate-btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+    font-weight: bold;
+    font-family: 'Inconsolata';
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.generate-btn:hover {
+    background-color: hsl(7, 71%, 60%);
+
+}

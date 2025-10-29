@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Form starts -->
+
+  <main>
+    <h4 class="project-logo">
+      <img src="../assets/images/logo-mark.svg" alt="logo do projeto">
+      Coding confi
+    </h4>
+    <h1 class="project-title">
+      Your Journey to Coding Conf 2025 Starts Here!
+    </h1>
+    <p class="project-desc">Secure your spot at next year's biggest coding conference.</p>
+    <br>
+    <form action="">
+
+      <div class="form-field">
+        <label for="upFile">
+          Upload Avatar
+        </label>
+        <div class="upFile-div">
+          <input type="file" id="upFile">
+            <img src="../assets/images/icon-upload.svg" alt="upFile">
+            <label for="upFile" style="text-align: center;">
+              Drag and drop or click to upload
+            </label>
+          </input>
+        </div>
+        <small class="upFIle-desc">
+          <i class='bx  bx-info-circle'  ></i> 
+          Upload your photo (JPG or PNG, max size: 500KB).
+        </small>
+      </div>
+
+      <div class="form-field">
+        <label for="name">
+          Full Name
+        </label>
+        <input type="text" placeholder="Jonatan Kristof" id="name" class="name"></input>
+      </div>
+
+      <div class="form-field">
+        <label for="email">
+          Email Address
+        </label>
+        <input type="email" placeholder="example@email.com" id="email"></input>
+      </div>
+
+      <div class="form-field">
+        <label for="gitHub">
+          GitHub Username
+        </label>
+        <input type="text" placeholder="@yourusername" id="gitHub"></input>
+      </div>
+      
+      <button class="generate-btn" id="generate-btn">
+        Generate My Ticket
+      </button>
+    </form>
+
+    <!-- Form ends -->
+    <!-- Generated tickets starts -->
+    Congrats, <!-- Full Name -->! Your ticket is ready.
+    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+    Coding Conf
+    Jan 31, 2025 / Austin, TX
+    <!-- Generated tickets ends -->
+
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
