@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Conference ticket generator</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
   <!-- Form starts -->
@@ -30,16 +34,26 @@
           Upload Avatar
         </label>
         <div class="upFile-div">
-          <input type="file" id="upFile">
-            <img src="../assets/images/icon-upload.svg" alt="upFile">
-            <label for="upFile" style="text-align: center;">
-              Drag and drop or click to upload
-            </label>
-          </input>
+          <img src="../assets/images/icon-upload.svg" alt="upFile" class="icon-upload">
+          <label for="upFile" class="upFile-label">
+            <div class="drop-zone">
+              <p>Drag and drop or click to upload</p>
+              <input type="file" id="upFile" accept="image/*" required></input>
+            </div>
+          </label>
+          <div class="after-upload">
+            <button class="remove-image-btn">
+              Remove image
+            </button>
+            <div class="change-image-btn">
+              <input type="file" accept="image/*" style="height: 100%; width: max-content;">
+              <p>Change Image</p>
+            </div>
+          </div>
         </div>
         <small class="upFIle-desc">
-          <i class='bx  bx-info-circle'  ></i> 
-          Upload your photo (JPG or PNG, max size: 500KB).
+          <i class='bx  bx-info-circle'></i>
+          <p class="upFile-instructions">Upload your photo (JPG or PNG, max size: 500KB).</p>
         </small>
       </div>
 
@@ -47,38 +61,78 @@
         <label for="name">
           Full Name
         </label>
-        <input type="text" placeholder="Jonatan Kristof" id="name" class="name"></input>
+        <input type="text" placeholder="Jonatan Kristof" id="name" class="name" required></input>
       </div>
 
       <div class="form-field">
         <label for="email">
           Email Address
         </label>
-        <input type="email" placeholder="example@email.com" id="email"></input>
+        <input type="email" placeholder="example@email.com" id="email" class="email" required></input>
       </div>
 
       <div class="form-field">
         <label for="gitHub">
           GitHub Username
         </label>
-        <input type="text" placeholder="@yourusername" id="gitHub"></input>
+        <input type="text" placeholder="@yourusername" id="gitHub" class="gitHub" required></input>
       </div>
-      
+
       <button class="generate-btn" id="generate-btn">
         Generate My Ticket
       </button>
     </form>
 
-    <!-- Form ends -->
-    <!-- Generated tickets starts -->
-    Congrats, <!-- Full Name -->! Your ticket is ready.
-    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-    Coding Conf
-    Jan 31, 2025 / Austin, TX
-    <!-- Generated tickets ends -->
+    <div class="ticket-container">
+      <p>
+        We've emailed your ticket to
+        <br>
+        <span>jonatan@email.com</span> and will send updates in
+        <br>
+        the run up to the event
+      </p>
+      <div class="ticket">
+        <div class="ticket-left">
+          <div class="ticket-data">
+            <img src="../assets/images/logo-mark.svg" alt="logo marca">
+            <div class="ticket-header">
+              <h1 class="ticket-title">
+                Coding Conf
+              </h1>
+              <small class="ticket-info">
+                Jan 31, 2025 / Austin, TX
+              </small>
+            </div>
+          </div>
+
+          <div class="ticket-user-data">
+            <img src="../assets/images/image-avatar.jpg" alt="avatar do usuario" class="user-icon">
+            <div class="ticket-user-info">
+              <h2 class="ticket-user-name">
+                Jonatan Kristof
+              </h2>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <img src="../assets/images/icon-github.svg" alt="icone do github">
+                <small>
+                  @joanatankristof0101
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket-right">
+          <p class="ticket-number">
+            #01609
+          </p>
+        </div>
+      </div>
+    </div>
+
 
     </div>
   </main>
   <script src="index.js"></script>
 </body>
+
 </html>

@@ -45,7 +45,7 @@ form {
     max-width: 500px;
 }
 
-form input:not(input[type="file"]) {
+.name, .email , .gitHub {
     color: hsl(0, 0%, 100%);
     display: flex;
     width: 100%;
@@ -59,6 +59,8 @@ form input:not(input[type="file"]) {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid hsl(0, 0%, 100%);
     outline: none;
+    font-family: 'Inconsolata';
+    font-size: 1em;
 }
 
 form label {
@@ -72,6 +74,7 @@ form label {
 }
 
 .upFile-div {
+    position: relative;
     cursor: pointer;
     background:
         repeating-linear-gradient(to right, hsl(0, 0%, 100%) 0 5px, transparent 5px 12px) top,
@@ -81,16 +84,57 @@ form label {
         rgba(255, 255, 255, 0.06);
     background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
     background-repeat: no-repeat;
-    backdrop-filter: blur(3.8px);
-    -webkit-backdrop-filter: blur(3.8px);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 40px;
+    text-align: center;
 }
 
-form input[type="file"] {
-    opacity: 0;
+.upFile-label {
+    text-align: center;
+}
+
+#upFile {
+  position: absolute;
+  inset: 0; 
+  opacity: 0;
+  cursor: pointer;
+}
+
+.after-upload{
     display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.remove-image-btn , .change-image-btn{
+    width: 120px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.129);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    text-decoration: underline;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inconsolata';
+}
+
+.change-image-btn{
+    position: relative;
+}
+
+.change-image-btn p{
+    z-index: -1;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.change-image-btn input{
+    opacity: 0;
 }
 
 .upFIle-desc {
@@ -101,6 +145,10 @@ form input[type="file"] {
     padding: 10px 0;
     letter-spacing: 1px;
     color: hsl(252, 6%, 83%);
+}
+
+.error{
+    color: red !important;
 }
 
 .generate-btn {
@@ -121,3 +169,106 @@ form input[type="file"] {
     background-color: hsl(7, 71%, 60%);
 
 }
+
+.ticket-container {
+    display: none;
+}
+
+.ticket {
+    display: flex;
+    margin: 30px auto;
+    width: 490px;
+    height: 200px;
+    padding: 7px 15px;
+    border: 1px solid hsl(0, 0%, 100%);
+    background: rgba(255, 255, 255, 0.063);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+.ticket-left {
+    width: 70%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.ticket-data {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.ticket-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ticket-info {
+    color: hsl(252, 6%, 83%);
+}
+
+.ticket-user-data {
+    display: flex;
+    gap: 10px;
+}
+
+.ticket-user-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+}
+
+.ticket-user-name {
+    display: flex;
+}
+
+#user-icon {
+    max-width: 60px;
+    max-height: auto;
+    border-radius: 10px;
+}
+
+.ticket-right {
+    width: 30%;
+    position: relative;
+    border-left: 1px dashed hsl(0, 0%, 100%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.ticket-right::before,
+.ticket-right::after {
+    z-index: 999;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.8em;
+    height: 1.5em;
+    background: rgb(28, 1, 86);
+    border-radius: 50%;
+    left: -1em;
+}
+
+.ticket-right::before {
+    top: -1em;
+}
+
+.ticket-right::after {
+    bottom: -1em;
+}
+
+.ticket-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: 90deg;
+    transform: translateX(80px);
+    color: hsl(252, 6%, 83%);
+    font-size: 1.4em;
+}
+
+/* elements created by javascript */
