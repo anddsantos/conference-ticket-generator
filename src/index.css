@@ -40,7 +40,7 @@ main {
 
 form {
     margin: auto;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     max-width: 500px;
 }
@@ -171,7 +171,11 @@ form label {
 }
 
 .ticket-container {
-    /* display: none; */
+    display: none;
+}
+
+span{
+    color: hsl(7, 88%, 67%);
 }
 
 .ticket {
@@ -182,7 +186,7 @@ form label {
     padding: 7px 15px;
     border: 1px solid hsl(0, 0%, 100%);
     background: rgba(255, 255, 255, 0.063);
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -226,7 +230,7 @@ form label {
     display: flex;
 }
 
-#user-icon {
+.user-icon {
     max-width: 60px;
     max-height: auto;
     border-radius: 10px;

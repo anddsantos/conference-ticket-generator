@@ -6,6 +6,7 @@ const bxCircle = document.querySelector('.bx-info-circle')
 const afterUpload = document.querySelector('.after-upload')
 const removeImageBtn = document.querySelector('.remove-image-btn')
 const changeImageBtn = document.querySelector('.change-image-btn')
+let userIcon = null
 
 input.addEventListener('change', () => {
     if (input.files.length > 0) {
@@ -84,6 +85,8 @@ changeInput.addEventListener('change', () => {
             e.preventDefault()
             img.remove()
         })
+
+        userIcon = img
     }
 });
 
@@ -108,6 +111,7 @@ form.addEventListener('submit', (e) => {
     }
     else {
         animation()
+        generateTicket(userIcon)
     }
 })
 
@@ -122,13 +126,43 @@ githubInput.addEventListener('focus', () => {
     if (githubInput.value === '') githubInput.value = '@'
 })
 
-//generate ticket
+//generating ticket
 const ticket = document.querySelector('.ticket-container')
+
+function generateTicket(userIcon){
+    const userNameInput = document.querySelector('.name')
+    const userName = userNameInput.value
+    const gitHubUserName = githubInput.value
+    
+    const ticketUserName = document.querySelector('.ticket-user-name')
+    const ticketGitHubName = document.querySelector('.ticket-github-name')
+
+    ticketUserName.textContent = userName
+    ticketGitHubName.textContent = gitHubUserName
+
+    const ticketUserIcon = document.querySelector('.ticket-user-icon');
+    ticketUserIcon.innerHTML = '';
+
+    if (userIcon) {
+        const clonedImg = userIcon.cloneNode(true);
+        ticketUserIcon.appendChild(clonedImg);
+        console.log(clonedImg)
+    }
+
+    const badgeNumber = Math.floor(Math.random() * 10000)
+    console.log(badgeNumber)
+    const badgeNumberInput = document.querySelector('.ticket-number')
+
+    if(badgeNumberInput){
+        badgeNumberInput.textContent = `#${badgeNumber}`
+    }
+}
 
 function animation() {
     const header = document.querySelector('.header')
     const loader = document.querySelector('.loader')
     const loaderStatus = document.querySelector('.loader-status')
+    const loaderContainer = document.querySelector('.loader-container')
 
     if(loader){
         loader.style.display = 'block'
@@ -138,7 +172,6 @@ function animation() {
     header.style.display = 'none'
 
     const status = [
-        'Analyzing information',
         'Putting everything in its place',
         'Generating code',
         'Generating ticket'
@@ -154,7 +187,7 @@ function animation() {
             clearInterval(interval);
             loader.style.display = 'none'
             ticket.style.display = 'block'
-            loaderStatus.display = 'none'
+            loaderContainer.style.display = 'none'
         }
     }, 2000);
 }
