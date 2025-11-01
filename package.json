@@ -1,0 +1,21 @@
+{
+  "name": "conference-ticket-generator-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Conference ticket generator coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anddsantos/conference-ticket-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anddsantos/conference-ticket-generator/issues"
+  },
+  "homepage": "https://github.com/anddsantos/conference-ticket-generator#readme"
+}

@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="src/index.css">
+  <link rel="stylesheet" href="src/loader.css">
   <title>Frontend Mentor | Conference ticket generator</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" integrity="sha512-DIW4FkYTOxjCqRt7oS9BFO+nVOwDL4bzukDyDtMO7crjUZhwpyrWBFroq+IqRe6VnJkTpRAS6nhDvf0w+wHmxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -22,12 +24,20 @@
       <img src="../assets/images/logo-mark.svg" alt="logo do projeto">
       Coding confi
     </h4>
-    <h1 class="project-title">
-      Your Journey to Coding Conf 2025 Starts Here!
-    </h1>
-    <p class="project-desc">Secure your spot at next year's biggest coding conference.</p>
+
+    <div class="loader-container">
+      <div class="loader"></div>
+      <p class="loader-status"></p>
+    </div>
+
+    <div class="header">
+      <h1 class="project-title">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="project-desc">Secure your spot at next year's biggest coding conference.</p>
+    </div>
     <br>
-    <form action="">
+    <form action="" id="form">
 
       <div class="form-field">
         <label for="upFile">
@@ -78,7 +88,7 @@
         <input type="text" placeholder="@yourusername" id="gitHub" class="gitHub" required></input>
       </div>
 
-      <button class="generate-btn" id="generate-btn">
+      <button class="generate-btn" id="generate-btn" type="submit">
         Generate My Ticket
       </button>
     </form>
@@ -133,6 +143,7 @@
     </div>
   </main>
   <script src="src/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
