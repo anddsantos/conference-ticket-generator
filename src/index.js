@@ -8,6 +8,7 @@ const removeImageBtn = document.querySelector('.remove-image-btn')
 const changeImageBtn = document.querySelector('.change-image-btn')
 let userIcon = null
 
+
 input.addEventListener('change', () => {
     if (input.files.length > 0) {
         const type = input.files[0].type
@@ -30,6 +31,7 @@ input.addEventListener('change', () => {
         img.id = 'user-icon'
         img.class = 'user-icon'
         img.src = URL.createObjectURL(input.files[0])
+        userIcon = img
 
         dropzone.innerHTML = ``
         iconUpload.remove()
@@ -130,9 +132,16 @@ githubInput.addEventListener('focus', () => {
 const ticket = document.querySelector('.ticket-container')
 
 function generateTicket(userIcon){
+    const email = emailInput.value
+    const emailSpan = document.querySelector('.email-span')
+    emailSpan.textContent = email
+
     const userNameInput = document.querySelector('.name')
     const userName = userNameInput.value
     const gitHubUserName = githubInput.value
+
+    const userNameSpan = document.querySelector('.name-span')
+    userNameSpan.textContent = userName
     
     const ticketUserName = document.querySelector('.ticket-user-name')
     const ticketGitHubName = document.querySelector('.ticket-github-name')
@@ -140,21 +149,16 @@ function generateTicket(userIcon){
     ticketUserName.textContent = userName
     ticketGitHubName.textContent = gitHubUserName
 
-    const ticketUserIcon = document.querySelector('.ticket-user-icon');
-    ticketUserIcon.innerHTML = '';
-
-    if (userIcon) {
-        const clonedImg = userIcon.cloneNode(true);
-        ticketUserIcon.appendChild(clonedImg);
-        console.log(clonedImg)
-    }
-
     const badgeNumber = Math.floor(Math.random() * 10000)
-    console.log(badgeNumber)
     const badgeNumberInput = document.querySelector('.ticket-number')
 
     if(badgeNumberInput){
         badgeNumberInput.textContent = `#${badgeNumber}`
+    }
+
+    const ticketImage = document.querySelector('.ticket-user-icon')
+    if (ticketImage && userIcon) {
+        ticketImage.src = userIcon.src
     }
 }
 
@@ -163,6 +167,7 @@ function animation() {
     const loader = document.querySelector('.loader')
     const loaderStatus = document.querySelector('.loader-status')
     const loaderContainer = document.querySelector('.loader-container')
+    loaderContainer.style.display = 'flex'
 
     if(loader){
         loader.style.display = 'block'

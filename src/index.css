@@ -7,14 +7,22 @@
 }
 
 body {
-    background-color: rgb(28, 1, 86);
     color: hsl(0, 0%, 100%);
     text-align: center;
     font-family: 'Inconsolata';
+    background-color: rgb(28, 1, 86);
 }
 
 main {
     padding: 25px;
+    background: url(../assets/images/pattern-lines.svg), url(../assets/images/pattern-squiggly-line-bottom-desktop.svg), url(../assets/images/pattern-squiggly-line-top.svg), url(../assets/images/pattern-circle.svg);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: center, center;
+    background-size: auto, cover, 700px;
+    background-position: center center,
+    center bottom,
+    right top -70px,
+    100% center;
 }
 
 .project-logo {
@@ -45,7 +53,9 @@ form {
     max-width: 500px;
 }
 
-.name, .email , .gitHub {
+.name,
+.email,
+.gitHub {
     color: hsl(0, 0%, 100%);
     display: flex;
     width: 100%;
@@ -95,20 +105,21 @@ form label {
 }
 
 #upFile {
-  position: absolute;
-  inset: 0; 
-  opacity: 0;
-  cursor: pointer;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 
-.after-upload{
+.after-upload {
     display: none;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.remove-image-btn , .change-image-btn{
+.remove-image-btn,
+.change-image-btn {
     width: 120px;
     height: 30px;
     background: rgba(255, 255, 255, 0.129);
@@ -122,18 +133,18 @@ form label {
     font-family: 'Inconsolata';
 }
 
-.change-image-btn{
+.change-image-btn {
     position: relative;
 }
 
-.change-image-btn p{
+.change-image-btn p {
     z-index: -1;
     position: absolute;
     top: 5px;
     left: 10px;
 }
 
-.change-image-btn input{
+.change-image-btn input {
     opacity: 0;
 }
 
@@ -147,7 +158,7 @@ form label {
     color: hsl(252, 6%, 83%);
 }
 
-.error{
+.error {
     color: red !important;
 }
 
@@ -174,7 +185,13 @@ form label {
     display: none;
 }
 
-span{
+.name-span{
+    background: -webkit-linear-gradient(left, hsl(0, 0%, 100%) 30%, hsl(7, 71%, 60%) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.email-span {
     color: hsl(7, 88%, 67%);
 }
 
@@ -230,7 +247,7 @@ span{
     display: flex;
 }
 
-.user-icon {
+.ticket-user-icon {
     max-width: 60px;
     max-height: auto;
     border-radius: 10px;
