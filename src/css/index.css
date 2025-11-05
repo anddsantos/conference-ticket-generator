@@ -21,9 +21,9 @@ main {
     background-position: center, center;
     background-size: auto, cover, 700px;
     background-position: center center,
-    center bottom,
-    right top -70px,
-    75% 55%;
+        center bottom,
+        right top -70px,
+        75% 55%;
 }
 
 .project-logo {
@@ -72,6 +72,11 @@ form {
     outline: none;
     font-family: 'Inconsolata';
     font-size: 1em;
+    transition: all .3s ease;
+}
+
+form .name:focus,.email:focus,.gitHub:focus{
+    outline: 2px solid hsl(0, 0%, 100%);
 }
 
 form label {
@@ -99,6 +104,11 @@ form label {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 40px;
     text-align: center;
+    transition: all .3s ease;
+}
+
+.upFile-div:hover {
+    background: rgba(255, 255, 255, 0.121);
 }
 
 .upFile-label {
@@ -186,10 +196,10 @@ form label {
     display: none;
 }
 
-.name-span{
+.name-span {
     background: -webkit-linear-gradient(left, hsl(0, 0%, 100%) 30%, hsl(7, 71%, 60%) 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .email-span {
@@ -295,8 +305,12 @@ form label {
     font-size: 1.4em;
 }
 
-@media(max-width: 410px){
-    .ticket-left{
+@media(max-width: 410px) {
+    .ticket-left {
         gap: 15px;
+    }
+
+    .ticket>* {
+        width: 400px;
     }
 }
