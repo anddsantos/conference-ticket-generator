@@ -14,15 +14,16 @@ body {
 }
 
 main {
+    min-height: 100vh;
     padding: 25px;
-    background: url(../assets/images/pattern-lines.svg), url(../assets/images/pattern-squiggly-line-bottom-desktop.svg), url(../assets/images/pattern-squiggly-line-top.svg), url(../assets/images/pattern-circle.svg);
+    background: url(../../assets/images/pattern-lines.svg), url(../../assets/images/pattern-squiggly-line-bottom-desktop.svg), url(../../assets/images/pattern-squiggly-line-top.svg), url(../../assets/images/pattern-circle.svg);
     background-repeat: no-repeat, repeat, no-repeat;
     background-position: center, center;
     background-size: auto, cover, 700px;
     background-position: center center,
     center bottom,
     right top -70px,
-    100% center;
+    75% 55%;
 }
 
 .project-logo {
@@ -198,7 +199,7 @@ form label {
 .ticket {
     display: flex;
     margin: 30px auto;
-    width: 490px;
+    max-width: 490px;
     height: 200px;
     padding: 7px 15px;
     border: 1px solid hsl(0, 0%, 100%);
@@ -213,12 +214,14 @@ form label {
     width: 70%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
 
 .ticket-data {
     display: flex;
     gap: 15px;
-    margin-bottom: 50px;
 }
 
 .ticket-header {
@@ -292,4 +295,8 @@ form label {
     font-size: 1.4em;
 }
 
-/* elements created by javascript */
+@media(max-width: 410px){
+    .ticket-left{
+        gap: 15px;
+    }
+}

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="src/index.css">
-  <link rel="stylesheet" href="src/loader.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="src/css/loader.css">
   <title>Frontend Mentor | Conference ticket generator</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -50,7 +50,7 @@
           <label for="upFile" class="upFile-label">
             <div class="drop-zone">
               <p>Drag and drop or click to upload</p>
-              <input type="file" id="upFile" accept="image/*" required></input>
+              <input type="file" id="upFile" accept="image/*" name="photo" required></input>
             </div>
           </label>
           <div class="after-upload">
@@ -73,21 +73,21 @@
         <label for="name">
           Full Name
         </label>
-        <input type="text" placeholder="Jonatan Kristof" id="name" class="name" required></input>
+        <input type="text" placeholder="Jonatan Kristof" id="name" class="name" name="name" required></input>
       </div>
 
       <div class="form-field">
         <label for="email">
           Email Address
         </label>
-        <input type="email" placeholder="example@email.com" id="email" class="email" required></input>
+        <input type="email" placeholder="example@email.com" id="email" class="email" name="email" required></input>
       </div>
 
       <div class="form-field">
         <label for="gitHub">
           GitHub Username
         </label>
-        <input type="text" placeholder="@yourusername" id="gitHub" class="gitHub" required></input>
+        <input type="text" placeholder="@yourusername" id="gitHub" class="gitHub" name="gitHub" required></input>
       </div>
 
       <button class="generate-btn" id="generate-btn" type="submit">
@@ -147,7 +147,8 @@
 
     </div>
   </main>
-  <script src="src/index.js"></script>
+  <script src="src/js/index.js"></script>
+  <script src="src/js/email.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
